@@ -1,0 +1,22 @@
+{
+  "type":"generate",
+  "command":"props",
+  "data":[
+    {
+      "property":"Name",
+      "type":"string"
+    },
+    {
+      "property":"Desc",
+      "type":"string"
+    },
+    {
+      "property":"Price",
+      "type":"double"
+    },
+    {
+      "property":"Sku",
+      "type":"string"
+    }
+  ]
+}

@@ -21,8 +21,11 @@ namespace DevTools.Services
             {
                 if(command.SubType == CommandSubType.GenerateProps)
                 {
-                    var obj = command.CommandParams;
-                        
+                    foreach (var item in command.data)
+                    {
+                        Console.WriteLine($"public {item.type} {item.property} {{get;set;}}");
+                    }
+                
                     return;        
                 }
             }

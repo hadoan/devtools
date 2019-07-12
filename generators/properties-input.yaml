@@ -1,7 +1,0 @@
-type: generate
-command:  props
-props:
-  Name: string
-  Desc: string
-  Sku: string
-  Price: double

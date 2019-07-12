@@ -4,11 +4,13 @@ namespace DevTools.Services
 {
       public enum CommandType
     {
-        Generate
+        Generate,
+        Unknown
     }
 
     public enum CommandSubType
     {
-        GenerateProps
+        GenerateProps,
+        Unknown
     }
 }
