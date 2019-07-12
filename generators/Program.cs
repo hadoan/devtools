@@ -27,6 +27,7 @@ namespace generators
         {
             serviceProvider = new ServiceCollection()
             .AddSingleton<IFileInputCommandHandlerService, FileInputHandlerService>()
+            .AddSingleton<IFileOutputService,FileOutputService>()
              .BuildServiceProvider();
         }
     }

@@ -7,6 +7,10 @@ namespace DevTools.Services {
     public class FileInputHandlerService : BaseHandlerService, IFileInputCommandHandlerService {
         private string fileName;
 
+        public FileInputHandlerService(IFileOutputService fileOutputService) : base(fileOutputService)
+        {
+        }
+
         public void Handle (string fileName) {
             if (!System.IO.File.Exists (fileName)) {
                 Console.WriteLine ($"{fileName} couldn't be found at {AppContext.BaseDirectory}.");

@@ -4,10 +4,11 @@ namespace DevTools.Services
 {
     public abstract class BaseHandlerService
     {
+        private readonly IFileOutputService fileOutputService;
 
-        public BaseHandlerService()
+        public BaseHandlerService(IFileOutputService fileOutputService)
         {
-
+            this.fileOutputService = fileOutputService;
         }
 
         protected void Help()
@@ -23,8 +24,12 @@ namespace DevTools.Services
                 {
                     foreach (var item in command.data)
                     {
-                        Console.WriteLine($"public {item.type} {item.property} {{get;set;}}");
+                        var line =$"public {item.type} {item.property} {{get;set;}}";
+                        Console.WriteLine(line);
+                        fileOutputService.AppendLine(line);
                     }
+                    
+                    fileOutputService.SaveToFile();
                 
                     return;        
                 }
