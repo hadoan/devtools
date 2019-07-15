@@ -10,11 +10,7 @@ namespace generators
 
         static void Main(string[] args)
         {
-
             Console.WriteLine("Dev-tool generator");
-
-            Console.WriteLine("property: g props --d Name: string, Desc: string");
-
             //setup our DI
             SetupContainer();
 
